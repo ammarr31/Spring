@@ -51,4 +51,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void bulkDelete(List<Long> ids) {
          employeeRepo.deleteAllById(ids);
     }
+
+    @Override
+    public List<Employee> searchEmployees(String name) {
+        return employeeRepo.findEmployeesByNameIgnoreCaseStartingWith(name);
+    }
 }

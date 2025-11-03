@@ -50,4 +50,10 @@ public class EmployeeController {
     public void deleteEmployees(@RequestBody List<Long> ids) {
         employeeService.bulkDelete(ids);
     }
+
+    @GetMapping("/search")
+    public List<Employee> searchEmployees(@RequestParam String name) {
+        return employeeService.searchEmployees(name);
+    }
+
 }

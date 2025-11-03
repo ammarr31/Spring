@@ -19,4 +19,6 @@ public interface EmployeeService{
     // bulk
     void bulkDelete(List<Long> ids);
 
+    List<Employee> searchEmployees(String name);
+
 }
